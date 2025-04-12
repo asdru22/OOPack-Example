@@ -1,18 +1,11 @@
 package ale;
 
+import oopack.Namespace;
 import oopack.datapack.Datapack;
 
 public class ExampleDatapack extends Datapack {
-    public ExampleDatapack() {
-        super(new ExampleNamespace());
-        this.setPackMCMeta(String.format("""
-                {
-                    "pack": {
-                        "pack_format":  52,
-                        "description": "by %s"
-                    }
-                }
-                """, Global.AUTHOR));
-
+    public ExampleDatapack(Namespace ns) {
+        super(ns);
+        this.setPackMCMeta(Global.MCMETA);
     }
 }
